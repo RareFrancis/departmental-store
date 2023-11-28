@@ -1,0 +1,138 @@
+<!-- <div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="close" (click)="closeModal()">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <img [src]="selectedImageSrc" alt="Large Image">
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+          </div>
+      </div>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div *ngIf="showModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" (click)="closeModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img [src]="selectedImageSrc" alt="Large Image">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div *ngIf="showModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" (click)="closeModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" (click)="closeModal()">
+        <img [src]="selectedImageSrc" alt="Large Image" (click)="openModal(selectedImageSrc)">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+
+
+<div class="modal-body">
+  <img [src]="selectedImageSrc" alt="Large Image">
+  <br>
+  <div class="quantity">
+    <h5>Select your Quantity</h5>
+
+     <ul>
+      <li class="qty" style="list-style: none;font-size: 13px;">
+        <input type="radio" name="quantity" value="10grams"[(ngModel)]="binding">10g 
+        <input type="radio" name="quantity" value="50grams"[(ngModel)]="binding">50g 
+        <input type="radio" name="quantity" value="100grams" [(ngModel)]="binding">100g 
+        <input type="radio" name="quantity" value="250grams" [(ngModel)]="binding">250g 
+        <input type="radio" name="quantity" value="500grams" [(ngModel)]="binding">500g 
+      </li>
+    
+      <!-- Repeat similar lines for other quantity options  -->
+    </ul>
+    <!-- <div>
+       (quantityChange)="handleQuantityChange($event)">
+    </div>
+    
+    <div>
+      <p>Selected Quantity: {{ selectedQuantity }}</p>
+    </div>
+     -->
+  </div>
+</div>
+
+<!-- Modal footer -->
+<div class="modal-footer">
+  <!-- <button type="button" class="btnn btn-primary" (click)="addToCart(selectedQuantity)"> ADD Cart </button> -->
+  <button (click)="addtocart(item)" class="btn btn-sm btn-warning mt-2"><i class='bx bxs-cart-add'></i>&nbsp;Add to cart</button>&nbsp;
+    <button (click)="buynow(item)" class="btn btn-sm btn-success mt-2">&nbsp;Buy Now</button>
+</div>
+

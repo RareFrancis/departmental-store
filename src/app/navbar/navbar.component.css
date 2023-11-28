@@ -1,0 +1,134 @@
+.navbar {
+    opacity: 0.8;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+
+.logo {
+    text-decoration: none;
+    width: 15%;
+    height: 20%;
+}
+
+.navbar-nav {
+    font-size: 15px;
+
+}
+
+.nav-link {
+
+    color: green;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 35px;
+}
+
+.nav-link:hover {
+    color: orange;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+.nav-link {
+    position: relative;
+    color: green;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav-link::before {
+    content: '';
+    height: 6px;
+    background-color: green;
+
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+
+
+.navbar-toggler {
+    color: white;
+    background-color: green;
+    border-radius: 6px;
+    text-align: end;
+    padding: 14px 14px;
+    margin-left: 150px;
+}
+
+.icon {
+    display: flex;
+    background-color: green;
+    padding: 1px 1px;
+    border-radius: 6px;
+    font-size: 15px;
+
+}
+
+.icon {
+    margin-right: 10px;
+    /* Add space between icons */
+}
+
+.icon a {
+    text-decoration: none;
+    color: black;
+}
+
+.icon i {
+    background-color: green;
+    color: black;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.icon i:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+.green i:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+
+    .green.d-lg-flex {
+        display: none;
+    }
+
+    .navbar-toggler {
+        display: inline-block;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .icon {
+        margin-right: 10px;
+    }
+
+    .green.d-flex {
+        display: flex;
+        justify-content: flex-top;
+        width: 100%;
+    }
+
+}
